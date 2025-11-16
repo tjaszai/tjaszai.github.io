@@ -12,13 +12,13 @@ Mondhatni tökéletes időszak az ember számára, hogy megálljon egy pillanatr
 
 Ahogy elkezdtem megtervezni és összerakni ezt a projektet, rájöttem, hogy a korábbi elképzeléseimen túl, mennyi mindenről szeretnék még írni, mennyi mindent szeretnék megosztani másokkal.
 
-Hogy ki vagyok? **Egy szoftverfejlesztő Budapestről** és a célom, hogy...
+Ki vagyok én? **Egy szoftverfejlesztő Budapestről** és a célom, hogy...
 
 * megosszam azokat a tanulságokat és tapasztalatokat, amiket az elmúlt évek során szedtem össze
 * betekintést nyújtsak azon dolgokba, amiken jelenleg dolgozom
 * dokumentáljam a saját tanulási utamat
 * ha úgy alakul, akkor hosszabb távon létrehozzak egy barátságos, támogató közösséget
 
-Remélem, hogy a továbbiakban sikerül olyan tartalmakat készítenem, amelyek mások számára is hasznosak lehetnek.
+Bízom benne, hogy a későbbiekben olyan tartalmakat tudok készíteni, amelyek valóban hasznosak lehetnek mások számára.
 
-Találkozzunk a következő bejegyzésben! 😊
+Nézz vissza egy kicsit később, már dolgozom az új bejegyzéseken! 😊
