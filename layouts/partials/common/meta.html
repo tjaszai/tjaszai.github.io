@@ -1,0 +1,36 @@
+<!-- Meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ .Title }} | {{ .Site.Title }}</title>
+
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{ $defaultAuthor := T "translations.site.author" }}
+<meta name="author" content="{{ with .Params.Author }}{{ . }}{{ else }}{{ $defaultAuthor }}{{ end }}">
+<!-- ca. 155 chars -->
+{{ $defaultDescription := T "translations.site.desc" }}
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ $defaultDescription }}{{ end }}">
+<meta name="robots" content="{{ with .Params.Noindex }}noindex, nofollow{{ else }}index, follow{{ end }}">
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}">
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ $defaultDescription }}{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+{{ with .Params.Images }}
+    <meta property="og:image" content="{{ index . 0 }}">
+{{ end }}
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}">
+<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ $defaultDescription }}{{ end }}">
+{{ with .Params.Images }}
+    <meta name="twitter:image" content="{{ index . 0 }}">
+{{ end }}
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.BaseURL }}assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.BaseURL }}assets/images/favicon-16x16.png">

@@ -1,0 +1,11 @@
+{{ $taxonomy := "tags" }}
+{{ with .Param $taxonomy }}
+    {{ range $index, $tag := . }}
+        {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
+            {{ $lowerTitle := lower $tag | urlize }}
+            <a href="{{ .Permalink }}">
+                <span class="badge text-bg-primary">{{ T (printf "%s%s" "translations.tags." $lowerTitle) }}</span>
+            </a>
+        {{- end -}}
+    {{- end -}}
+{{ end }}

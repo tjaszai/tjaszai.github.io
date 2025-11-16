@@ -1,0 +1,11 @@
+{{ $taxonomy := "categories" }}
+{{ with .Param $taxonomy }}
+    {{ range $index, $category := . }}
+        {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $category) -}}
+                {{ $lowerTitle := lower $category | urlize }}
+                <a href="{{ .Permalink }}">
+                    <span class="badge text-bg-secondary">{{ T (printf "%s%s" "translations.categories." $lowerTitle) }}</span>
+                </a>
+        {{- end -}}
+    {{- end -}}
+{{ end }}

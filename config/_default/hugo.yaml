@@ -1,0 +1,38 @@
+title: jaszai.dev
+baseURL: http://localhost:1313/
+
+languageCode: hu-hu
+defaultContentLanguage: hu
+defaultContentLanguageInSubdir: true
+
+languages:
+    hu:
+        languageName: Magyar
+        weight: 1
+        contentDir: content/hu
+
+taxonomies:
+    category: categories
+    tag: tags
+
+pagination:
+    pagerSize: 15
+
+markup:
+    highlight:
+        codeFences: true
+        style: dracula
+        lineNos: true
+        lineNumbersInTable: false
+
+    tableOfContents:
+        endLevel: 6
+
+outputs:
+    home: [html]
+    page: [html]
+    section: [html]
+    taxonomy: [html]
+    term: [html]
+
+disableHugoGeneratorInject: true

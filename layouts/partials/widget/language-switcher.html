@@ -1,0 +1,18 @@
+{{ if hugo.IsMultilingual }}
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {{ T "translations.label.language" }}
+        </a>
+        <ul class="dropdown-menu">
+            {{ range .Site.Languages }}
+                {{ if eq . $.Site.Language }}
+                    <li><a class="dropdown-item active" href="#">{{ .LanguageName }}</a></li>
+                {{ else }}
+                    {{ range $.Translations }}
+                        <li><a class="dropdown-item" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        </ul>
+    </li>
+{{ end }}

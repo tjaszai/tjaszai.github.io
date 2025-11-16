@@ -1,0 +1,26 @@
+{{ define "main" }}
+    <div class="article-content">
+        <article class="block">
+            <header class="title">
+                <h1>{{ .Title }}</h1>
+            </header>
+            <main class="body">
+                <!-- TODO: breadcrumb -->
+
+                <div class="mb-3">
+                    <div class="d-inline">{{ partial "widget/categories.html" .}}</div>
+                    <div class="d-inline date">{{ .Date.Format "2006.01.02." }}</div>
+                </div>
+
+                {{ if (ne .Params.toc false) }}
+                    <div class="toc">{{ partial "widget/toc" . }}</div>
+                {{ end }}
+
+                {{ .Content }}
+
+                <div class="mt-4">{{ partial "widget/tags.html" . }}</div>
+            </main>
+        </article>
+    </div>
+    {{ partial "widget/comments.html" . }}
+{{ end }}

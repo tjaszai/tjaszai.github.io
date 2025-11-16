@@ -1,0 +1,14 @@
+<div class="block">
+    <div class="title">
+        <h3><i class="bi bi-stickies"></i> {{ T "translations.label.recent_posts" }}</h3>
+    </div>
+    <div class="body">
+        <ul class="list-group list-group-flush">
+            {{ range first 5 (where .Site.RegularPages "Type" "posts") }}
+                <li class="list-group-item">
+                    <a href="{{ .Permalink }}"><span>{{ .Date.Format "2006.01.02." }}</span> {{ .Title }}</a>
+                </li>
+            {{ end }}
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+translations:
+    label:
+        posts: &label_posts Bejegyzések
+        projects: &label_projects Projektek
+        categories: &label_categories Kategóriák
+        tags: &label_tags Címkék
+
+        language: Nyelv
+        table_of_contents: Tartalomjegyzék
+
+        recent_posts: Legutóbbi bejegyzések
+
+        comment_block: >
+            Hibát, elírást vagy pontatlanságot találtál? Építő jellegű kritikát fogalmaznál meg?
+            A visszajelzések segítenek abban, hogy jobb minőségű bejegyzések és tartalmak szülessenek az oldalon.
+            Minden észrevételt szívesen fogadok.
+            Kérlek, oszd meg velem a gondolataidat és meglátásaidat:<br/>
+            <ul>
+                <li><strong>Email formájában</strong> – küldj egy üzenetet az <strong>jaszaidev [kukac] gmail.com</strong> címre</li>
+            </ul>
+
+        previous: Előző
+        next: Következő
+
+    site:
+        author: tjaszai
+        desc: &site_description >
+            Jegyzetek és gondolatok azon dolgokról, amiken jelenleg dolgozom vagy amiket érdekesnek találok.
+            Szoftverfejlesztés, DevOps, kiberbiztonság, IoT projektek.
+
+    nav:
+        posts: *label_posts
+        projects: *label_projects
+        categories: *label_categories
+        tags: *label_tags
+
+    home_info:
+        title: Hello! 👋
+        content: *site_description
+
+    categories:
+        programming: Programozás
+
+    tags:
+        blog: Blog
+        go: Go
+        golang: Golang
+        go-course: Go tanfolyam
+        go-crash-course: Golang gyorstalpaló tanfolyam

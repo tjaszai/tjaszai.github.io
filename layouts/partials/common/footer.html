@@ -1,0 +1,18 @@
+{{ with .Params.hide_footer }}
+    <!-- No footer here! -->
+{{ else }}
+    <footer>
+        <div class="divider"></div>
+        <div class="footer-content">
+            <!-- discord, github, sitemap etc. -->
+            © <strong>{{ .Site.Title }}</strong> - {{ now.Year }}.
+        </div>
+    </footer>
+
+    {{ $options := (dict "targetPath" "assets/js/main.js") }}
+    {{ $jsBundle := resources.Get "ts/main.ts" | js.Build $options }}
+    {{ if hugo.IsProduction }}
+        {{ $jsBundle = $jsBundle | minify | fingerprint }}
+    {{ end }}
+    <script src="{{ $jsBundle.Permalink }}" integrity="{{ $jsBundle.Data.Integrity }}" defer></script>
+{{ end }}

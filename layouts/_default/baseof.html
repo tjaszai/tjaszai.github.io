@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Lang }}">
+    <head>
+        {{ partial "common/meta.html" . }}
+        {{ partial "common/styles.html" . }}
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    {{ partial "common/nav.html" . }}
+
+                    {{ block "main" . }}
+                    {{ end }}
+
+                    {{ partial "common/footer.html" . }}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

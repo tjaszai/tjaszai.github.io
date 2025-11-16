@@ -1,0 +1,13 @@
+# IDE
+.idea
+.vscode
+
+# Vendor
+/node_modules/
+
+# Generated directories and files
+/assets/jsconfig.json
+/public/
+/resources/
+.hugo_build.lock
+hugo_stats.json

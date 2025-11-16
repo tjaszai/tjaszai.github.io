@@ -1,0 +1,276 @@
+// ----------------------------------------------------
+//  IMPORTS
+// ----------------------------------------------------
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+$container-max-widths: (
+    sm: 480px,
+    md: 640px,
+    lg: 800px,
+    xl: 840px,
+    xxl: 880px,
+);
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// ----------------------------------------------------
+//  VARIABLES
+// ----------------------------------------------------
+
+$space-sm: 0.75rem;
+$space-md: 1.25rem;
+$space-lg: 2rem;
+$space-xl: 3rem;
+$space-xxl: 4rem;
+
+$color-bg: #ffffff;
+$color-text: #212529;
+$color-text-muted: #4c5760;
+$color-muted: #878787;
+
+// ----------------------------------------------------
+//  DEFAULTS
+// ----------------------------------------------------
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: $space-lg $space-md;
+    background: $color-bg;
+
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    line-height: 1.75;
+    color: $color-text;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+table {
+    @extend .table;
+    @extend .table-striped;
+    @extend .table-hover;
+
+    margin: $space-md 0 $space-lg 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    border-radius: 6px;
+}
+
+a {
+    text-decoration: none;
+    text-underline-offset: 3px;
+
+    &:hover {
+        opacity: 0.85;
+        color: $color-text;
+    }
+}
+
+.pagination {
+    margin-top: $space-lg;
+}
+
+// ----------------------------------------------------
+//  NAVBAR
+// ----------------------------------------------------
+
+.navbar {
+    border-bottom: 1px dotted $color-muted;
+
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+
+    .navbar-brand {
+        font-weight: 700;
+        font-size: 16pt;
+    }
+}
+
+// ----------------------------------------------------
+//  CONTENT
+// ----------------------------------------------------
+
+.page-content,
+.article-content {
+    .block > .title {
+        h1 {
+            margin-top: $space-lg;
+            margin-bottom: $space-lg;
+        }
+
+        h2, h3 {
+            margin: $space-lg 0 $space-md 0;
+        }
+    }
+
+    .block > .body {
+        h2, h3 {
+            margin: $space-lg 0;
+        }
+
+        h4, h5, h6 {
+            margin: $space-md 0;
+        }
+
+        p {
+            margin-bottom: $space-sm;
+            color: $color-text-muted;
+        }
+
+        .date {
+            color: $color-muted;
+        }
+
+        text-align: justify;
+    }
+}
+
+.toc {
+    margin-bottom: 25px;
+    padding: 15px 15px;
+
+    background-color: #e8e8e8;
+    border-radius: 6px;
+
+    div {
+        margin-bottom: $space-sm;
+        font-weight: bold;
+    }
+
+    ul {
+        margin-bottom: 0;
+        font-size: 12pt;
+    }
+}
+
+.comment-block {
+    margin: $space-md 0;
+    padding: 20px 15px;
+
+    background-color: #e8e8e8;
+    border-radius: 6px;
+
+    font-size: 12pt;
+    text-align: justify;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    ul {
+        margin: 10px 0;
+    }
+}
+
+// ----------------------------------------------------
+//  FOOTER
+// ----------------------------------------------------
+
+footer {
+    margin-top: $space-lg;
+
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    text-align: center;
+
+    .footer-content {
+        padding-top: $space-sm;
+    }
+}
+
+// ----------------------------------------------------
+//  HELPERS
+// ----------------------------------------------------
+
+pre {
+    margin: $space-md 0;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+code {
+    color: $primary;
+}
+
+blockquote {
+    margin: $space-lg 0;
+    padding: .6rem;
+    border-radius: 6px;
+    background-color: #ececec;
+
+    p {
+        margin-bottom: 0 !important;
+        color: $color-muted;
+        font-weight: 200;
+        font-size: 11pt;
+    }
+}
+
+.divider {
+    margin: 0 auto 10px auto;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dotted #ccc;
+}
+
+.list-group {
+    .list-group-item {
+        span {
+            color: $color-muted;
+        }
+    }
+}
+
+// ----------------------------------------------------
+//  ANIMATIONS
+// ----------------------------------------------------
+
+.prompt {
+    display: inline-block;
+    height: 3px;
+    width: 9px;
+    margin-left: 4px;
+
+    background-color: #000000;
+
+    animation: blink 1.2s steps(1) infinite;
+}
+
+@keyframes blink {
+    0%, 49%, 100% {
+        opacity: 1;
+    }
+    50%, 99% {
+        opacity: 0;
+    }
+}

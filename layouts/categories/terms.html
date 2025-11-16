@@ -1,0 +1,19 @@
+{{ define "main" }}
+    <div class="page-content">
+        <article class="block">
+            <header class="title">
+                {{ $lowerTitle := lower .Title | urlize }}
+                <h1>{{ T (printf "%s%s" "translations.label." $lowerTitle) }}</h1>
+            </header>
+            <main class="body">
+                {{ .Content }}
+                {{ range .Pages }}
+                    {{ $lowerTitle := lower .Title | urlize }}
+                    <a href="{{ .RelPermalink }}">
+                        <span class="badge text-bg-primary">{{ T (printf "%s%s" "translations.categories." $lowerTitle) }}</span>
+                    </a>
+                {{ end }}
+            </main>
+        </article>
+    </div>
+{{ end }}

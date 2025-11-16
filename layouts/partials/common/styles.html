@@ -1,0 +1,7 @@
+<!-- Stylesheets -->
+{{ $options := (dict "targetPath" "assets/css/main.css" ) }}
+{{ $scss    := resources.Get "scss/main.scss" | css.Sass $options }}
+{{ if hugo.IsProduction }}
+    {{ $scss = $scss | minify | fingerprint | resources.PostProcess }}
+{{ end }}
+<link rel="stylesheet" href="{{ $scss.Permalink }}" integrity="{{ $scss.Data.Integrity }}">

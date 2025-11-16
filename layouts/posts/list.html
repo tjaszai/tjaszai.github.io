@@ -1,0 +1,21 @@
+{{ define "main" }}
+    <div class="article-content">
+        <article class="block">
+            <header class="title">
+                <h1>{{ T "translations.label.posts" }}</h1>
+            </header>
+            <main class="body">
+                <ul class="list-group list-group-flush">
+                    {{ $paginator := .Paginator }}
+                    {{ range $paginator.Pages }}
+                        <li class="list-group-item">
+                            <a href="{{ .Permalink }}"><span>{{ .Date.Format "2006.01.02." }}</span> {{ .Title }}</a>
+                        </li>
+                    {{ end }}
+                </ul>
+
+                {{ partial "widget/pagination.html" (dict "Paginator" $paginator) }}
+            </main>
+        </article>
+    </div>
+{{ end }}

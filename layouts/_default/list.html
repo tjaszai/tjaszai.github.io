@@ -1,0 +1,22 @@
+{{ define "main" }}
+    <div class="page-content">
+        <div class="block">
+            <div class="title">
+                <h1>{{ T "translations.home_info.title" }}</h1>
+            </div>
+            <div class="body">
+                <p>{{ T "translations.home_info.content" }}</p>
+            </div>
+        </div>
+
+        {{ with .Content }}
+            <div class="block">
+                <div class="body">
+                    {{- . -}}
+                </div>
+            </div>
+        {{ end }}
+
+        {{ partial "widget/recent-posts.html" . }}
+    </div>
+{{ end }}
