@@ -10,13 +10,15 @@ translations:
 
         recent_posts: Legutóbbi bejegyzések
 
+        content_not_found: Ez a szekció jelenleg üres, de ne csüggedj – térj vissza később, hátha addigra tele lesz izgalmas tartalmakkal.
+
         comment_block: >
             Hibát, elírást vagy pontatlanságot találtál? Építő jellegű kritikát fogalmaznál meg?
             A visszajelzések segítenek abban, hogy jobb minőségű bejegyzések és tartalmak szülessenek az oldalon.
             Minden észrevételt szívesen fogadok.
             Kérlek, oszd meg velem a gondolataidat és meglátásaidat:<br/>
             <ul>
-                <li><strong>Email formájában</strong> – küldj egy üzenetet a <strong>jaszaidev [kukac] gmail.com</strong> címre</li>
+                <li><strong>Email formájában</strong> – küldj egy üzenetet a <strong>jaszaidev [kukac] gmail [pont] com</strong> címre</li>
             </ul>
 
         previous: Előző

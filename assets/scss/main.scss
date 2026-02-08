@@ -12,8 +12,8 @@ $container-max-widths: (
     sm: 480px,
     md: 640px,
     lg: 800px,
-    xl: 840px,
-    xxl: 880px,
+    xl: 860px,
+    xxl: 980px,
 );
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
@@ -44,7 +44,7 @@ $color-muted: #878787;
 }
 
 html {
-    font-size: 18px;
+    font-size: 16px;
     scroll-behavior: smooth;
 }
 
@@ -141,12 +141,24 @@ a {
         }
 
         p {
-            margin-bottom: $space-sm;
+            margin-bottom: $space-md;
             color: $color-text-muted;
         }
 
         .date {
             color: $color-muted;
+        }
+
+        ul {
+            margin: 6px 0;
+        }
+
+        ul:not(li *) {
+            margin: 20px 0;
+
+            li {
+                padding: 2px 0;
+            }
         }
 
         text-align: justify;
@@ -157,7 +169,7 @@ a {
     margin-bottom: 25px;
     padding: 15px 15px;
 
-    background-color: #e8e8e8;
+    background-color: #f1f1f1;
     border-radius: 6px;
 
     div {
@@ -165,9 +177,11 @@ a {
         font-weight: bold;
     }
 
-    ul {
-        margin-bottom: 0;
-        font-size: 12pt;
+    #TableOfContents {
+        ul {
+            margin: 0;
+            font-size: 12pt;
+        }
     }
 }
 
@@ -175,7 +189,7 @@ a {
     margin: $space-md 0;
     padding: 20px 15px;
 
-    background-color: #e8e8e8;
+    background-color: #f1f1f1;
     border-radius: 6px;
 
     font-size: 12pt;

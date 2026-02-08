@@ -5,16 +5,22 @@
                 <h1>{{ T "translations.label.projects" }}</h1>
             </header>
             <main class="body">
-                <ul class="list-group list-group-flush">
-                    {{ $paginator := .Paginator }}
-                    {{ range $paginator.Pages }}
-                        <li class="list-group-item">
-                            <a href="{{ .Permalink }}"><span>{{ .Date.Format "2006.01.02." }}</span> {{ .Title }}</a>
-                        </li>
-                    {{ end }}
-                </ul>
+                {{ $paginator := .Paginator }}
+                {{ if gt (len $paginator.Pages) 0 }}
+                    <ul class="list-group list-group-flush">
+                        {{ range $paginator.Pages }}
+                            <li class="list-group-item">
+                                <a href="{{ .Permalink }}"><span>{{ .Date.Format "2006.01.02." }}</span> {{ .Title }}</a>
+                            </li>
+                        {{ end }}
+                    </ul>
 
-                {{ partial "widget/pagination.html" (dict "Paginator" $paginator) }}
+                    {{ partial "widget/pagination.html" (dict "Paginator" $paginator) }}
+                {{ else }}
+                    <p>
+                        <i>{{ T "translations.label.content_not_found" }}</i>
+                    </p>
+                {{ end }}
             </main>
         </article>
     </div>
